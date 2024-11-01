@@ -1,0 +1,97 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #45c395;
+}
+
+#difficultyButtons {
+    margin: 20px 0;
+}
+
+#difficultyButtons button {
+    margin: 0 5px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #61fb7d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#difficultyButtons button:hover {
+    background-color: #f12121;
+}
+
+#configForm {
+    margin: 15px 0;
+}
+
+#configForm label, #configForm input {
+    margin: 5px;
+    font-size: 1rem;
+}
+
+
+#board {
+    display: grid;
+    gap: 3px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #73db43;
+    color: #282c34;
+    border-radius: 3px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cell:hover {
+    background-color: #e12d2d;
+}
+
+.cell.mine {
+    background-color: red;
+    animation: shake 0.3s ease;
+}
+
+.cell.revealed {
+    background-color: #ffffff;
+    transform: scale(1.0);  
+}
+
+
+@keyframes shake {
+    0% { transform: translate(0); }
+    25% { transform: translate(-5px, 5px); }
+    50% { transform: translate(5px, -5px); }
+    75% { transform: translate(-5px, 5px); }
+    100% { transform: translate(0); }
+}
